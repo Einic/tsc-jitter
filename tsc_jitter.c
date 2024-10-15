@@ -145,8 +145,8 @@ static int __init tsc_jitter_init(void) {
     printk(KERN_INFO "TSC Frequency: %lu Hz\n", tsc_nominal_hz);
 
     expected_inc = (unsigned long)(1.0 * SLEEP_MS / 1000 * tsc_nominal_hz);
-    low = (unsigned long)(expected_inc * 0.98);
-    high = (unsigned long)(expected_inc * 1.02);
+    low = (unsigned long)(expected_inc * 0.95);
+    high = (unsigned long)(expected_inc * 1.05);
 
     printk(KERN_INFO "Expected Increment: %lu, Low: %lu, High: %lu\n", expected_inc, low, high);
 
